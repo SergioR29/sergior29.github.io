@@ -903,27 +903,48 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 0.4rem;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.experience-period {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
 }
 
 .date-badge {
-    font-size: 0.82rem;
-    font-family: var(--font-code);
-    padding: 0.35rem 0.75rem;
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+    padding: 0.3rem 0.6rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border-subtle);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.duration-badge {
+    color: var(--text-primary);
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
 }
 
 .fct-badge {
     display: inline-block;
     font-size: 0.78rem;
     font-weight: 600;
-    padding: 0.2rem 0.65rem;
+    padding: 0.3rem 0.6rem;
     background: rgba(0, 210, 255, 0.12);
     border: 1px solid rgba(0, 210, 255, 0.35);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     color: var(--accent-cyan);
     white-space: nowrap;
 }
@@ -940,6 +961,13 @@ body {
 
 .experience-bullets li {
     position: relative;
+}
+
+.experience-bullets li::before {
+    content: '-';
+    position: absolute;
+    left: -1rem;
+    color: var(--accent-cyan);
 }
 
 .experience-tech-wrapper {
@@ -969,7 +997,7 @@ body {
    ========================================================================== */
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: 1.75rem;
 }
 
@@ -1065,7 +1093,7 @@ body {
 }
 
 .project-card {
-    flex: 1 1 380px;
+    flex: 1 1 300px;
     max-width: 520px;
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
@@ -1395,7 +1423,7 @@ body {
    ========================================================================== */
 .languages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: 2rem;
     max-width: 900px;
     margin: 0 auto;
@@ -1541,6 +1569,11 @@ body {
     display: flex;
     gap: 1.25rem;
     align-items: flex-start;
+    min-width: 0;
+}
+
+.contact-info-item > div:last-child {
+    min-width: 0;
 }
 
 .info-icon {
@@ -1569,6 +1602,7 @@ body {
 .contact-link {
     color: var(--accent-cyan);
     font-size: 0.95rem;
+    overflow-wrap: anywhere;
     transition: var(--transition-smooth);
 }
 
@@ -1788,8 +1822,13 @@ body {
    ========================================================================== */
 @media (max-width: 992px) {
     .hero-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 3rem;
+    }
+
+    .hero-container > *,
+    .hero-content {
+        min-width: 0;
     }
 
     .hero-visual {
@@ -1867,5 +1906,100 @@ body {
 
     .contact-box {
         padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+
+    .hero-section {
+        padding: 4rem 0 3rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        overflow-wrap: anywhere;
+    }
+
+    .status-badge {
+        max-width: 100%;
+        flex-wrap: wrap;
+        border-radius: var(--radius-sm);
+    }
+
+    .hero-tagline {
+        min-height: 0;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        font-size: 1.1rem;
+    }
+
+    .typing-text {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-cta-group {
+        flex-wrap: wrap;
+        gap: 0.65rem;
+    }
+
+    .hero-cta-group .btn {
+        flex: 1 1 125px;
+        min-width: 0;
+        padding: 0.75rem 0.8rem;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .hero-highlights {
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+    }
+
+    .highlight-divider {
+        display: none;
+    }
+
+    .highlight-item {
+        flex: 1 1 110px;
+        min-width: 0;
+    }
+
+    .highlight-number,
+    .highlight-label {
+        overflow-wrap: anywhere;
+    }
+
+    .terminal-body {
+        overflow-x: hidden;
+        padding: 0.9rem;
+        font-size: 0.72rem;
+    }
+
+    .terminal-body pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-box {
+        padding: 1.5rem 1rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.75rem;
+    }
+
+    .contact-info-list,
+    .contact-form {
+        min-width: 0;
+    }
+
+    .contact-info-item {
+        gap: 0.75rem;
     }
 }

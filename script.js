@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingElement = document.getElementById('typingText');
     const words = [
         'de IA y Big Data',
-        'de Escritorio (Python, PySide6)',
+        'de PC (Python, PySide6)',
         'de Android (Java)'
     ];
     let wordIndex = 0;
