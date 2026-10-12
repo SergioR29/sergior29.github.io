@@ -1,0 +1,175 @@
+Quiero crear mi web personal de marca con HTML, CSS y JS puros. Voy a gestionar yo los ficheros,
+así que dame el código completo de cada fichero en un bloque, sin explicaciones largas.
+
+Ficha: Soy Sergio Romero Tejedor, un Técnico Superior DAM del IES Brianda de Mendoza que está especializándose en IA y Big Data en el IES Arcipreste de Hita..
+Cosas que he hecho: Un sistema de gestión de RRHH para el Ayuntamiento de Marchamalo durante mis prácticas de 2ºDAM, un TFG en DAM llamado TURISMO & PLANNING que incluye dos versiones diferentes: Una para Windows que es TurismoPlanning-Desktop (Python, PySide6, SQLite, MVC) y otra para Android que es TurismoPlanning-Mobile (Java, SQLite, Gradle, MVVM).
+Me gusta: Videojuegos, Tecnología y Música
+Quiero ser / me interesa: Quiero ser un desarrollador de IA y Big Data y Multiplataforma de escritorio (Windows y Linux) y móvil (Android).
+Colores/estilo: Oscuro, Azul, Dinámico
+
+Haz el index.html con: cabecera (nombre + frase), "Sobre mí", "Lo que he hecho",
+"Me gusta", un pie de página con contacto. HTML semántico, etiquetas comentadas.
+
+--
+En mi web falta / se ve mal: En la sección de Inicio donde pone "Sergio Romero" tiene que ser "Sergio Romero Tejedor". 
+Donde pone "Desktop & Móvil" tienes que quitar lo de C++. 
+Y en los proyectos del TFG-DAM en vez de "TURISMO & PLANNING: <Plataforma>" pon TurismoPlanning-<Plataforma>(describe lo que ves, no lo que crees).
+
+Añade esta descripción para la sección de las prácticas: 
+"Desarrollo colaborativo de una solución de escritorio compatible con Windows para optimizar procesos manuales de gestión de información de los empleados destinada al personal de RRHH. Proyecto presentado en redes sociales y producto final puesto en producción actualmente.
+
+Funciones:
+
+- Evaluación de los empleados.
+- Gestión de competencias.
+- Generación de informes de desempeño y del listado de las notas medias de todos los empleados en PDF.
+- Visualización de ayuda práctica para el usuario en el uso de la aplicación.
+- Exportación masiva de datos de los empleados en un fichero CSV que puede ser visualizado manualmente en
+Excel.
+- Función que permite dar de baja al empleado seleccionado.
+- Gestión de los empleados dados de baja y posibilidad de eliminar la baja de cada uno por separado.
+- Visualización de las personas que cumplen trienio en los próximos 30 días.
+- Configuración de notificaciones por correo electrónico en el que se pueden añadir hasta 3 emails destinatarios,
+marcar una casilla para activar un aviso de cumplimiento de trienio al enviar el correo y pulsar un botón para enviar un correo de trienios mediante el protocolo SMTP.
+- Botón para recargar la información de nuevo en la tabla de empleados de la pantalla principal y en la de los empleados dados de baja.
+
+Tecnologías: 
+
+- Python
+- PySide6 (Qt)
+- SQLite
+- MVC
+- xhtml2pdf
+- smtplib"
+
+Añade esta descripción para la sección de TurismoPlanning-Desktop:
+"Esta es la versión de la app de mi trabajo de fin de grado (TFG) del CFGS DAM que he desarrollado para Windows, un proyecto con enfoque turístico en los usuarios de la provincia española de Guadalajara que les permite en una sola aplicación gestionar información de la zona (y alrededores) y de asuntos personales del usuario como la planificación de viajes.
+
+Funciones:
+
+- Visualización de un calendario interactivo en el que se puede seleccionar un día para planificar un evento personal.
+- Planificación de eventos agrupados por categorías personales del usuario, prioridad y fecha de finalización.
+- Gestión de categorías personales del usuario agrupadas por orden de prioridad.
+- Gestión de eventos asociados a la categoría seleccionada por el usuario agrupados por orden de prioridad.
+- Visualización de información de municipios y sus sitios asociados.
+- Detección de ubicación y clima del municipio seleccionado en un mapa interactivo.
+- Planificación de una visita al sitio seleccionado o del municipio asociado al sitio solamente.
+- Mapa interactivo basado en Leaflet.js (JavaScript) incrustado en un QWebEngineView para visualizar la ubicación actual del usuario y el clima de la zona encontrada.
+- Creación y modificación de notas.
+- Guardado de notas en TXT por defecto seleccionado la ubicación en el explorador de archivos del dispositivo.
+- Opción para ajustar el tipo de letra del texto en el menú de escritura de notas.
+- Información de municipios, sitios, notas, categorías y eventos exportables a HTML o PDF mediante el uso de plantillas de HTML con CSS.
+
+Tecnologías:
+
+- Python
+- PySide6 (Qt)
+- SQLite
+- MVC
+- APIs RESTful (OWM, IPinfo)
+- JavaScript (Leaflet.js)
+- xhtml2pdf
+- pyinstaller
+- InstallForge
+- Git
+- GitHub"
+
+Añade esta descripción para la sección de TurismoPlanning-Mobile:
+"Esta es la versión de la app de mi trabajo de fin de grado (TFG) del CFGS DAM que he desarrollado para Android, un proyecto con enfoque turístico en los usuarios de la provincia española de Guadalajara que les permite en una sola aplicación gestionar información de la zona (y alrededores) y de asuntos personales del usuario como la planificación de viajes.
+
+Funciones: 
+
+- Visualización de información de municipios y sus sitios asociados.
+- Detección de ubicación y clima del municipio seleccionado en un mapa interactivo.
+- Planificación de una visita al sitio seleccionado o del municipio asociado al sitio solamente.
+- Mapa interactivo para visualizar la ubicación actual del usuario y el clima de la zona encontrada.
+- Calendario interactivo para la gestión de los eventos del día seleccionado del mes.
+- Creación y modificación de notas.
+- Guardado de notas en TXT por defecto seleccionado la ubicación en el explorador de archivos del dispositivo.
+- Planificación de eventos agrupados por categorías personales del usuario, prioridad y fecha de finalización.
+- Gestión de categorías personales del usuario agrupadas por orden de prioridad.
+- Gestión de eventos asociados a la categoría seleccionada por el usuario por orden de prioridad.
+- Información de municipios, sitios, notas, categorías y eventos exportables a HTML o PDF mediante el uso de plantillas de HTML con CSS.
+- Temas claro, oscuro y predeterminado por el sistema.
+
+Tecnologías:
+
+- Java
+- SQLite
+- Android Studio
+- Gradle
+- MVVM
+- XML
+- MaterialComponents
+- KalendarView
+- APIs RESTful (OWM: OpenWeatherMap)
+- OSMDroid
+- iTextPDF (iText7)
+- Retrofit 2.9
+- Git
+- GitHub"
+
+Donde pone "Windows & Linux" quita lo de Linux porque TurismoPlanning-Desktop es sólo para Windows y al la izquierda del emoji del ordenador pon el icono que has puesto a la izquierda del icono del móvil.
+En los datos de contacto pon mi correo electrónico bien: "romerotejedorsergio@gmail.com" y otra sección con mi GitHub: "https://github.com/SergioR29".
+Mi ubicación que sea "Marchamalo, Guadalajara (España)" y la sección de centros de formación quítala.
+Donde pone DAM y debajo IES Brianda de Mendoza que lo de DAM sea CFGS DAM.
+Entre la sección "Sobre mí" y la de "Lo que he hecho" añade dos secciones nuevas: "Experiencia" y "Educación".
+En la sección "Experiencia" añade las prácticas del Ayuntamiento de Marchamalo con nuevos datos:
+"Título: Desarrollador de software
+Empresa: Ayuntamiento de Marchamalo
+Fechas: abr 2025 - jun 2025 -> 3 meses
+Descripción: 
+"
+• Co-diseñé y desarrollé una solución informática orientada a optimizar procesos manuales dentro de un software de gestión de RRHH en Python con un gran volumen de datos.
+• La implementación permitió reducir en aproximadamente un 50 % el tiempo necesario para realizar gestiones administrativas informatizadas.
+• Debido a su éxito y aceptación por parte de los usuarios, la aplicación fue desplegada inmediatamente y continúa actualmente en producción en el ayuntamiento.
+• Esta experiencia reforzó mi enfoque en el desarrollo centrado en el usuario, priorizando la usabilidad y la creación de interfaces intuitivas con PySide6 y Qt Designer.
+"
+Listado con las tecnologías utilizadas (sácalas del proyecto de prácticas)
+".
+En la sección de "Educación" añade mis estudios:
+"
+"
+Título: Curso de Especialización en Inteligencia artificial y Big Data
+Fechas: Sept 2026 - Jun 2027
+Centro: IES Arcipreste de Hita
+Descripción: En curso
+"
+"
+Título: Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (CFGS DAM)
+Fechas: Sept 2023 - Jun 2025
+Centro: IES Brianda de Mendoza
+Descripción: <Mantén la de ahora>"
+"
+"
+Título: Bachillerato de Ciencias
+Fechas: Sept 2021 - Jun 2023
+Centro: IES Alejo Vera"
+"
+"
+Entre las secciones "Me gusta" y "Contacto" añade la sección de "Idiomas":
+"
+Español: Nativo
+Inglés: {
+    Nivel actual: B1
+    Cursando: Nivel Intermedio B1 (Presencial)
+    Centro: EOI Guadalajara (Escuela Oficial de Idiomas)
+    Fechas: Sept 2026 - Jun 2027
+}
+"
+--
+La sección de Idiomas muévela para que esté entre educación y "Lo que he hecho".
+La sección "Lo que he hecho" renómbrala a Proyectos.
+En la sección proyectos el botón "Windows Desktop" cambialo a "Escritorio".
+--
+"Desktop & Móvil" cámbialo a "Desktop & Mobile".
+--
+"Python & Java" cámbialo a 
+"
+Python: Windows y Linux\n 
+Java: Android".
+--
+Al lado de "Contacto" pon un botón "Descargar CV" para descargar mi CV adjuntado
+a través del siguiente enlace: "https://drive.google.com/uc?export=download&id=1PdMtKUExRVXLFFOW_hDAWm7-X5RnNOdt".
+
+Dame el HTML corregido de ese bloque y por qué pasaba.

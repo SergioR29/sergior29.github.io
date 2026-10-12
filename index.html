@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sergio Romero Tejedor | Desarrollador de Software & Especialista en IA y Big Data</title>
+    <meta name="description"
+        content="Portafolio oficial de Sergio Romero Tejedor. Desarrollador de software especializado en IA, Big Data y desarrollo multiplataforma (Windows y Android).">
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tipografía Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ==========================================================================
+         FONDO DINÁMICO CON RESPLANDOR (GLOW BACKGROUND)
+         ========================================================================== -->
+    <div class="background-decorations" aria-hidden="true">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- ==========================================================================
+         CABECERA / NAVEGACIÓN PRINCIPAL
+         ========================================================================== -->
+    <!-- Inicio de Cabecera -->
+    <header class="main-header" id="header">
+        <div class="container header-container">
+            <!-- Logotipo / Identificador de Marca -->
+            <a href="#inicio" class="logo" aria-label="Ir al inicio">
+                <span class="logo-badge">SR</span>
+                <span class="logo-text">Sergio Romero Tejedor</span>
+            </a>
+
+            <!-- Botón Accesible Menú Móvil -->
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Abrir menú de navegación"
+                aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Menú de Navegación -->
+            <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+                <!-- Secciones de navegación centradas en un solo bloque -->
+                <ul class="nav-center-list">
+                    <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                    <li class="nav-item"><a href="#experiencia" class="nav-link">Experiencia</a></li>
+                    <li class="nav-item"><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li class="nav-item"><a href="#educacion" class="nav-link">Educación</a></li>
+                    <li class="nav-item"><a href="#idiomas" class="nav-link">Idiomas</a></li>
+                    <li class="nav-item"><a href="#gustos" class="nav-link">Gustos</a></li>
+                </ul>
+
+                <!-- Acciones a la derecha (a partir de contacto) -->
+                <div class="nav-actions">
+                    <button class="nav-translate-btn" id="translateToggle" type="button"
+                        aria-label="Traducir la página del español al inglés" title="Traducir al inglés"
+                        aria-pressed="false">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M3 5h9M7.5 3v2m3.2 0c-.4 3-2.7 5.6-6.7 7"></path>
+                            <path d="M4.5 7c.8 2 2.7 3.8 5.2 4.7"></path>
+                            <path d="m13 20 3.5-9 3.5 9m-6-3h5"></path>
+                        </svg>
+                    </button>
+                    <a href="#contacto" class="nav-link nav-btn-contact">Contacto</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1PdMtKUExRVXLFFOW_hDAWm7-X5RnNOdt"
+                        class="nav-link nav-btn-cv" target="_blank" rel="noopener noreferrer" download>
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        <span>Descargar CV</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Fin de Cabecera -->
+
+    <!-- ==========================================================================
+         CONTENIDO PRINCIPAL
+         ========================================================================== -->
+    <main>
+
+        <!-- ======================================================================
+             SECCIÓN HERO / PRESENTACIÓN PRINCIPAL (NOMBRE + FRASE)
+             ====================================================================== -->
+        <!-- Inicio de Sección Hero -->
+        <section class="hero-section" id="inicio">
+            <div class="container hero-container">
+                <!-- Columna de Información -->
+                <div class="hero-content">
+                    <!-- Distintivo de Disponibilidad y Estado -->
+                    <div class="status-badge">
+                        <span class="status-indicator"></span>
+                        <span>Especializándome en IA & Big Data · IES Arcipreste de Hita</span>
+                    </div>
+
+                    <!-- Nombre del Profesional (H1 Semántico Principal) -->
+                    <h1 class="hero-title">
+                        Hola, soy <br>
+                        <span class="gradient-text">Sergio Romero Tejedor</span>
+                    </h1>
+
+                    <!-- Frase de Impacto Dinámica con Máquina de Escribir -->
+                    <p class="hero-tagline">
+                        <span class="typing-prefix">Desarrollador </span>
+                        <span class="typing-text" id="typingText">de IA y Big Data</span>
+                        <span class="cursor">|</span>
+                    </p>
+
+                    <!-- Resumen rápido / Descripción -->
+                    <p class="hero-description">
+                        Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (<strong>CFGS DAM</strong>) por
+                        el <strong>IES Brianda de Mendoza</strong> y especializándome en IA y Big Data en el <strong>IES
+                            Arcipreste de Hita</strong>. Apasionado por la creación de software de escritorio para
+                        Windows, soluciones móviles nativas para Android y el tratamiento avanzado de datos e
+                        inteligencia artificial.
+                    </p>
+
+                    <!-- Botones de Acción (Call to Action) -->
+                    <div class="hero-cta-group">
+                        <a href="#proyectos" class="btn btn-primary">
+                            <span>Ver proyectos</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M7 17l9.2-9.2M17 17V7H7" />
+                            </svg>
+                        </a>
+                        <a href="#contacto" class="btn btn-secondary">
+                            <span>Contactar</span>
+                        </a>
+                        <a href="https://drive.google.com/uc?export=download&id=1PdMtKUExRVXLFFOW_hDAWm7-X5RnNOdt"
+                            class="btn btn-cv" target="_blank" rel="noopener noreferrer" download>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            <span>Descargar CV</span>
+                        </a>
+                    </div>
+
+                    <!-- Estadísticas / Puntos Fuertes Rápidos -->
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-number">CFGS DAM</span>
+                            <span class="highlight-label">IES Brianda de Mendoza</span>
+                        </div>
+                        <div class="highlight-divider"></div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">IA & Big Data</span>
+                            <span class="highlight-label">IES Arcipreste de Hita</span>
+                        </div>
+                        <div class="highlight-divider"></div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">Escritorio y Móvil</span>
+                            <span class="highlight-label">Python: Windows y Linux<br>Java: Android</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Gráfica / Perfil Dinámico -->
+                <div class="hero-visual">
+                    <div class="code-terminal-card">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">perfil_sergio.json</span>
+                        </div>
+                        <div class="terminal-body">
+                            <pre><code class="language-json">{
+  <span class="token-key">"nombre"</span>: <span class="token-string">"Sergio Romero Tejedor"</span>,
+  <span class="token-key">"titulacion"</span>: <span class="token-string">"Técnico Superior en CFGS DAM"</span>,
+  <span class="token-key">"especializacion"</span>: <span class="token-string">"IA & Big Data"</span>,
+  <span class="token-key">"meta_profesional"</span>: [
+    <span class="token-string">"Desarrollador IA & Big Data"</span>,
+    <span class="token-string">"Escritorio (Windows, Linux)"</span>,
+    <span class="token-string">"Móvil (Android)"</span>
+  ],
+  <span class="token-key">"ubicacion"</span>: <span class="token-string">"Marchamalo, Guadalajara"</span>
+}</code></pre>
+                        </div>
+                        <div class="terminal-footer">
+                            <div class="terminal-tag">✓ Python / PySide6</div>
+                            <div class="terminal-tag">✓ Java Android</div>
+                            <div class="terminal-tag">✓ SQLite</div>
+                            <div class="terminal-tag">✓ MVC / MVVM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin de Sección Hero -->
+
+        <!-- ======================================================================
+             SECCIÓN "SOBRE MÍ"
+             ====================================================================== -->
+        <!-- Inicio de Sección Sobre Mí -->
+        <section class="section about-section" id="sobre-mi">
+            <div class="container">
+                <!-- Encabezado de Sección -->
+                <div class="section-header">
+                    <span class="section-tag">Perfil Profesional</span>
+                    <h2 class="section-title">Sobre mí</h2>
+                    <p class="section-subtitle">Trayectoria técnica, objetivos y aspiraciones profesionales.</p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Bio y Metas -->
+                    <article class="about-card bio-card">
+                        <h3 class="card-title">
+                            <span class="card-icon">👨‍💻</span>
+                            Quién soy
+                        </h3>
+                        <p>
+                            Soy <strong>Sergio Romero Tejedor</strong>, un <strong>Técnico Superior DAM</strong>
+                            graduado en el <strong>IES Brianda de Mendoza</strong> que actualmente está especializándose
+                            en <strong>Inteligencia Artificial y Big Data</strong> en el <strong>IES Arcipreste de
+                                Hita</strong>.
+                        </p>
+                        <p>
+                            He desarrollado soluciones integrales para entidades públicas reales, así como proyectos
+                            multiplataforma completos abarcando tanto el ecosistema de escritorio bajo Windows como el
+                            desarrollo móvil nativo en Android.
+                        </p>
+
+                        <!-- Objetivo / Qué quiero ser -->
+                        <div class="goal-box">
+                            <h4 class="goal-title">🎯 Qué quiero ser / Me interesa:</h4>
+                            <p class="goal-text">
+                                Quiero ser un <strong>desarrollador de IA y Big Data y Multiplataforma de escritorio
+                                    (Windows) y móvil (Android)</strong>.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Pilares Técnicos -->
+                    <div class="about-pillars">
+                        <!-- Pilar 1: Formación DAM -->
+                        <article class="pillar-card">
+                            <div class="pillar-icon-box">
+                                <span class="pillar-icon">🎓</span>
+                            </div>
+                            <div class="pillar-info">
+                                <h4>Técnico Superior en CFGS DAM</h4>
+                                <span class="pillar-institution">IES Brianda de Mendoza</span>
+                                <p>Bases sólidas en programación orientada a objetos, arquitecturas de software (MVC,
+                                    MVVM), bases de datos y desarrollo de aplicaciones multiplataforma.</p>
+                            </div>
+                        </article>
+
+                        <!-- Pilar 2: Especialización IA & Big Data -->
+                        <article class="pillar-card highlight-border">
+                            <div class="pillar-icon-box">
+                                <span class="pillar-icon">🧠</span>
+                            </div>
+                            <div class="pillar-info">
+                                <h4>Especialización en IA & Big Data</h4>
+                                <span class="pillar-institution">IES Arcipreste de Hita</span>
+                                <p>Formación especializada en aprendizaje automático, procesamiento y análisis masivo de
+                                    datos, algoritmos inteligentes y pipelines modernos.</p>
+                            </div>
+                        </article>
+
+                        <!-- Pilar 3: Enfoque Multiplataforma -->
+                        <article class="pillar-card">
+                            <div class="pillar-icon-box">
+                                <span class="pillar-icon">💻</span>
+                            </div>
+                            <div class="pillar-info">
+                                <h4>Multiplataforma: Windows & Android</h4>
+                                <span class="pillar-institution">Python · Java · SQLite</span>
+                                <p>Especialización en interfaces para Windows con PySide6 y aplicaciones nativas para
+                                    Android con Java y arquitectura MVVM.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin de Sección Sobre Mí -->
+
+        <!-- ======================================================================
+             SECCIÓN "EXPERIENCIA"
+             ====================================================================== -->
+        <!-- Inicio de Sección Experiencia -->
+        <section class="section experience-section" id="experiencia">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Trayectoria Laboral</span>
+                    <h2 class="section-title">Experiencia</h2>
+                    <p class="section-subtitle">Experiencia profesional en desarrollo de software.</p>
+                </div>
+
+                <div class="experience-timeline">
+                    <!-- Experiencia: Ayuntamiento de Marchamalo -->
+                    <article class="experience-card">
+                        <div class="experience-header">
+                            <div class="experience-role-group">
+                                <h3 class="experience-title">Desarrollador de software</h3>
+                                <div class="experience-company">
+                                    <span class="company-name">Ayuntamiento de Marchamalo</span>
+                                    <span class="company-badge">Sector Público</span>
+                                </div>
+                            </div>
+                            <div class="experience-dates">
+                                <span class="date-badge">abr 2025 - jun 2025 · 3 meses</span>
+                                <span class="fct-badge">Prácticas FCT</span>
+                            </div>
+                        </div>
+
+                        <div class="experience-body">
+                            <ul class="experience-bullets">
+                                <li>Co-diseñé y desarrollé una solución informática orientada a optimizar procesos
+                                    manuales dentro de un software de gestión de RRHH en Python con un gran volumen de
+                                    datos.</li>
+                                <li>La implementación permitió reducir en aproximadamente un 50 % el tiempo necesario
+                                    para realizar gestiones administrativas informatizadas.</li>
+                                <li>Debido a su éxito y aceptación por parte de los usuarios, la aplicación fue
+                                    desplegada inmediatamente y continúa actualmente en producción en el ayuntamiento.
+                                </li>
+                                <li>Esta experiencia reforzó mi enfoque en el desarrollo centrado en el usuario,
+                                    priorizando la usabilidad y la creación de interfaces intuitivas con PySide6 y Qt
+                                    Designer.</li>
+                            </ul>
+
+                            <div class="experience-tech-wrapper">
+                                <span class="tech-label">Tecnologías utilizadas:</span>
+                                <div class="tech-tags-list">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">PySide6 (Qt)</span>
+                                    <span class="tech-tag">SQLite</span>
+                                    <span class="tech-tag">MVC</span>
+                                    <span class="tech-tag">xhtml2pdf</span>
+                                    <span class="tech-tag">smtplib</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Fin de Sección Experiencia -->
+
+        <!-- ======================================================================
+             SECCIÓN "PROYECTOS" (ANTES "LO QUE HE HECHO")
+             ====================================================================== -->
+        <!-- Inicio de Sección Proyectos -->
+        <section class="section projects-section" id="proyectos">
+            <div class="container">
+                <!-- Encabezado de Sección -->
+                <div class="section-header">
+                    <span class="section-tag">Portafolio & Desarrollo</span>
+                    <h2 class="section-title">Proyectos</h2>
+                    <p class="section-subtitle">Proyectos en producción en administraciones públicas y soluciones de fin
+                        de grado.</p>
+                </div>
+
+                <!-- Botones de Filtrado Dinámico -->
+                <div class="project-filters" role="tablist" aria-label="Filtro de proyectos">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos
+                        (3)</button>
+                    <button class="filter-btn" data-filter="desktop" role="tab"
+                        aria-selected="false">Escritorio</button>
+                    <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">Android
+                        Mobile</button>
+                    <button class="filter-btn" data-filter="institucional" role="tab" aria-selected="false">Sector
+                        Público</button>
+                </div>
+
+                <!-- Grid de Proyectos -->
+                <div class="projects-grid">
+
+                    <!-- PROYECTO 1: Sistema de RRHH - Ayuntamiento de Marchamalo -->
+                    <article class="project-card featured-project" data-category="institucional desktop">
+                        <div class="project-media-wrapper">
+                            <figure class="project-figure marchamalo-project-figure">
+                                <div class="marchamalo-image-panel marchamalo-logo-panel">
+                                    <img src="assets/img/marchamalo-logo.png"
+                                        alt="Logo del Ayuntamiento de Marchamalo sobre fondo blanco"
+                                        class="project-img marchamalo-logo-img" loading="lazy">
+                                    <a href="https://github.com/SergioR29/AyuntamientoMarchamalo"
+                                        class="project-destination-link marchamalo-destination-link marchamalo-github-link"
+                                        target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
+                                </div>
+                                <div class="marchamalo-image-panel marchamalo-presentation-panel">
+                                    <img src="assets/img/marchamalo-presentacion.jpg"
+                                        alt="Presentación del Sistema de RRHH en el salón del Ayuntamiento de Marchamalo"
+                                        class="project-img marchamalo-presentation-img" loading="lazy">
+                                    <a href="https://www.instagram.com/p/DKb6KS6M-bp/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA=="
+                                        class="project-destination-link marchamalo-destination-link marchamalo-instagram-link"
+                                        target="_blank" rel="noopener noreferrer">Ver publicación en Instagram</a>
+                                </div>
+                                <figcaption class="sr-only">Presentación oficial ante el consistorio del Ayuntamiento de
+                                    Marchamalo</figcaption>
+                            </figure>
+                            <div class="project-overlay-badge">
+                                <span>Ayuntamiento de Marchamalo</span>
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="badge-type">Prácticas FCT · 2º DAM</span>
+                                <span class="badge-scope">En Producción Oficial</span>
+                            </div>
+
+                            <h3 class="project-title">Sistema de Gestión de RRHH - Ayuntamiento de Marchamalo</h3>
+
+                            <p class="project-description">
+                                Desarrollo colaborativo de una solución de escritorio compatible con Windows para
+                                optimizar procesos manuales de gestión de información de los empleados destinada al
+                                personal de RRHH. Proyecto presentado en redes sociales y producto final puesto en
+                                producción actualmente.
+                            </p>
+
+                            <!-- Funciones del Sistema de RRHH -->
+                            <div class="project-features-block">
+                                <h4 class="features-heading">Funciones:</h4>
+                                <ul class="project-features-list">
+                                    <li>Evaluación de los empleados.</li>
+                                    <li>Gestión de competencias.</li>
+                                    <li>Generación de informes de desempeño y del listado de las notas medias de todos
+                                        los empleados en PDF.</li>
+                                    <li>Visualización de ayuda práctica para el usuario en el uso de la aplicación.</li>
+                                    <li>Exportación masiva de datos de los empleados en un fichero CSV que puede ser
+                                        visualizado manualmente en Excel.</li>
+                                    <li>Función que permite dar de baja al empleado seleccionado.</li>
+                                    <li>Gestión de los empleados dados de baja y posibilidad de eliminar la baja de cada
+                                        uno por separado.</li>
+                                    <li>Visualización de las personas que cumplen trienio en los próximos 30 días.</li>
+                                    <li>Configuración de notificaciones por correo electrónico en el que se pueden
+                                        añadir hasta 3 emails destinatarios, marcar una casilla para activar un aviso de
+                                        cumplimiento de trienio al enviar el correo y pulsar un botón para enviar un
+                                        correo de trienios mediante el protocolo SMTP.</li>
+                                    <li>Botón para recargar la información de nuevo en la tabla de empleados de la
+                                        pantalla principal y en la de los empleados dados de baja.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Tecnologías utilizadas -->
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PySide6 (Qt)</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">MVC</span>
+                                <span class="tech-tag">xhtml2pdf</span>
+                                <span class="tech-tag">smtplib</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 2: TurismoPlanning-Desktop (TFG DAM) -->
+                    <article class="project-card" data-category="desktop">
+                        <div class="project-media-wrapper">
+                            <figure class="project-figure">
+                                <img src="assets/img/turismo-desktop.png"
+                                    alt="Captura de TurismoPlanning-Desktop en Qt Widgets Designer mostrando vista de calendario"
+                                    class="project-img" loading="lazy">
+                                <figcaption class="sr-only">Interfaz de calendario y planificación en Qt Designer
+                                </figcaption>
+                            </figure>
+                            <a href="https://github.com/SergioR29/TurismoPlanning-Desktop"
+                                class="project-destination-link turismo-repo-link" target="_blank"
+                                rel="noopener noreferrer">Ver repositorio en GitHub</a>
+                            <div class="project-overlay-badge">
+                                <img src="assets/img/turismo-icon.png" alt="Icono Turismo & Planning"
+                                    class="badge-mini-logo">
+                                <span>🖥️ Windows</span>
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="badge-type">TFG · CFGS DAM</span>
+                                <span class="badge-scope">Versión Windows</span>
+                            </div>
+
+                            <h3 class="project-title notranslate" translate="no">TurismoPlanning-Desktop</h3>
+
+                            <p class="project-description">
+                                Esta es la versión de la app de mi trabajo de fin de grado (TFG) del CFGS DAM que he
+                                desarrollado para Windows, un proyecto con enfoque turístico en los usuarios de la
+                                provincia española de Guadalajara que les permite en una sola aplicación gestionar
+                                información de la zona (y alrededores) y de asuntos personales del usuario como la
+                                planificación de viajes.
+                            </p>
+
+                            <!-- Funciones TurismoPlanning-Desktop -->
+                            <div class="project-features-block">
+                                <h4 class="features-heading">Funciones:</h4>
+                                <ul class="project-features-list">
+                                    <li>Visualización de un calendario interactivo en el que se puede seleccionar un día
+                                        para planificar un evento personal.</li>
+                                    <li>Planificación de eventos agrupados por categorías personales del usuario,
+                                        prioridad y fecha de finalización.</li>
+                                    <li>Gestión de categorías personales del usuario agrupadas por orden de prioridad.
+                                    </li>
+                                    <li>Gestión de eventos asociados a la categoría seleccionada por el usuario
+                                        agrupados por orden de prioridad.</li>
+                                    <li>Visualización de información de municipios y sus sitios asociados.</li>
+                                    <li>Detección de ubicación y clima del municipio seleccionado en un mapa
+                                        interactivo.</li>
+                                    <li>Planificación de una visita al sitio seleccionado o del municipio asociado al
+                                        sitio solamente.</li>
+                                    <li>Mapa interactivo basado en Leaflet.js (JavaScript) incrustado en un
+                                        QWebEngineView para visualizar la ubicación actual del usuario y el clima de la
+                                        zona encontrada.</li>
+                                    <li>Creación y modificación de notas.</li>
+                                    <li>Guardado de notas en TXT por defecto seleccionado la ubicación en el explorador
+                                        de archivos del dispositivo.</li>
+                                    <li>Opción para ajustar el tipo de letra del texto en el menú de escritura de notas.
+                                    </li>
+                                    <li>Información de municipios, sitios, notas, categorías y eventos exportables a
+                                        HTML o PDF mediante el uso de plantillas de HTML con CSS.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Tecnologías utilizadas -->
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PySide6 (Qt)</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">MVC</span>
+                                <span class="tech-tag">APIs RESTful (OWM, IPinfo)</span>
+                                <span class="tech-tag">JavaScript (Leaflet.js)</span>
+                                <span class="tech-tag">xhtml2pdf</span>
+                                <span class="tech-tag">pyinstaller</span>
+                                <span class="tech-tag">InstallForge</span>
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">GitHub</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 3: TurismoPlanning-Mobile (TFG DAM) -->
+                    <article class="project-card" data-category="mobile">
+                        <div class="project-media-wrapper">
+                            <figure class="project-figure">
+                                <img src="assets/img/turismo-mobile.png"
+                                    alt="Captura de TurismoPlanning-Mobile en Android mostrando menú lateral drawer"
+                                    class="project-img" loading="lazy">
+                                <figcaption class="sr-only">Menú de navegación Drawer de TurismoPlanning Mobile
+                                </figcaption>
+                            </figure>
+                            <div class="project-overlay-badge">
+                                <img src="assets/img/turismo-icon.png" alt="Icono Turismo & Planning"
+                                    class="badge-mini-logo">
+                                <span>📱 Android</span>
+                            </div>
+                            <a href="https://github.com/SergioR29/TurismoPlanning-Mobile"
+                                class="project-destination-link turismo-repo-link" target="_blank"
+                                rel="noopener noreferrer">Ver repositorio en GitHub</a>
+                        </div>
+
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="badge-type">TFG · CFGS DAM</span>
+                                <span class="badge-scope">Versión Móvil</span>
+                            </div>
+
+                            <h3 class="project-title notranslate" translate="no">TurismoPlanning-Mobile</h3>
+
+                            <p class="project-description">
+                                Esta es la versión de la app de mi trabajo de fin de grado (TFG) del CFGS DAM que he
+                                desarrollado para Android, un proyecto con enfoque turístico en los usuarios de la
+                                provincia española de Guadalajara que les permite en una sola aplicación gestionar
+                                información de la zona (y alrededores) y de asuntos personales del usuario como la
+                                planificación de viajes.
+                            </p>
+
+                            <!-- Funciones TurismoPlanning-Mobile -->
+                            <div class="project-features-block">
+                                <h4 class="features-heading">Funciones:</h4>
+                                <ul class="project-features-list">
+                                    <li>Visualización de información de municipios y sus sitios asociados.</li>
+                                    <li>Detección de ubicación y clima del municipio seleccionado en un mapa
+                                        interactivo.</li>
+                                    <li>Planificación de una visita al sitio seleccionado o del municipio asociado al
+                                        sitio solamente.</li>
+                                    <li>Mapa interactivo para visualizar la ubicación actual del usuario y el clima de
+                                        la zona encontrada.</li>
+                                    <li>Calendario interactivo para la gestión de los eventos del día seleccionado del
+                                        mes.</li>
+                                    <li>Creación y modificación de notas.</li>
+                                    <li>Guardado de notas en TXT por defecto seleccionado la ubicación en el explorador
+                                        de archivos del dispositivo.</li>
+                                    <li>Planificación de eventos agrupados por categorías personales del usuario,
+                                        prioridad y fecha de finalización.</li>
+                                    <li>Gestión de categorías personales del usuario agrupadas por orden de prioridad.
+                                    </li>
+                                    <li>Gestión de eventos asociados a la categoría seleccionada por el usuario por
+                                        orden de prioridad.</li>
+                                    <li>Información de municipios, sitios, notas, categorías y eventos exportables a
+                                        HTML o PDF mediante el uso de plantillas de HTML con CSS.</li>
+                                    <li>Temas claro, oscuro y predeterminado por el sistema.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Tecnologías utilizadas -->
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">Android Studio</span>
+                                <span class="tech-tag">Gradle</span>
+                                <span class="tech-tag">MVVM</span>
+                                <span class="tech-tag">XML</span>
+                                <span class="tech-tag">MaterialComponents</span>
+                                <span class="tech-tag">KalendarView</span>
+                                <span class="tech-tag">APIs RESTful (OWM)</span>
+                                <span class="tech-tag">OSMDroid</span>
+                                <span class="tech-tag">iTextPDF (iText7)</span>
+                                <span class="tech-tag">Retrofit 2.9</span>
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">GitHub</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- Fin de Sección Proyectos -->
+
+        <!-- ======================================================================
+             SECCIÓN "EDUCACIÓN"
+             ====================================================================== -->
+        <!-- Inicio de Sección Educación -->
+        <section class="section education-section" id="educacion">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Formación Académica</span>
+                    <h2 class="section-title">Educación</h2>
+                    <p class="section-subtitle">Titulaciones oficiales y especializaciones técnicas cursadas.</p>
+                </div>
+
+                <div class="education-grid">
+                    <!-- Educación 1: Especialización IA & Big Data -->
+                    <article class="education-card highlight-card">
+                        <div class="education-dates-badge">Sept 2026 - Jun 2027 · En curso</div>
+                        <h3 class="education-title">Curso de Especialización en Inteligencia artificial y Big Data</h3>
+                        <div class="education-center">IES Arcipreste de Hita</div>
+                        <p class="education-desc">
+                            Formación avanzada en machine learning, deep learning, arquitecturas de Big Data, análisis
+                            masivo de datos y despliegue de modelos de IA.
+                        </p>
+                    </article>
+
+                    <!-- Educación 2: CFGS DAM -->
+                    <article class="education-card">
+                        <div class="education-dates-badge">Sept 2023 - Jun 2025</div>
+                        <h3 class="education-title">Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (CFGS
+                            DAM)</h3>
+                        <div class="education-center">IES Brianda de Mendoza</div>
+                        <p class="education-desc">
+                            Bases sólidas en programación orientada a objetos, patrones arquitectónicos (MVC, MVVM),
+                            interfaces Qt y desarrollo de software multiplataforma.
+                        </p>
+                    </article>
+
+                    <!-- Educación 3: Bachillerato de Ciencias -->
+                    <article class="education-card">
+                        <div class="education-dates-badge">Sept 2021 - Jun 2023</div>
+                        <h3 class="education-title">Bachillerato de Ciencias</h3>
+                        <div class="education-center">IES Alejo Vera</div>
+                        <p class="education-desc">
+                            Modalidad científico-tecnológica con base matemática, analítica y metodológica.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Fin de Sección Educación -->
+
+        <!-- ======================================================================
+             SECCIÓN "IDIOMAS"
+             ====================================================================== -->
+        <!-- Inicio de Sección Idiomas -->
+        <section class="section languages-section" id="idiomas">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Competencias Lingüísticas</span>
+                    <h2 class="section-title">Idiomas</h2>
+                    <p class="section-subtitle">Capacidades comunicativas para entornos locales e internacionales.</p>
+                </div>
+
+                <div class="languages-grid">
+                    <!-- Español -->
+                    <article class="language-card">
+                        <div class="language-header">
+                            <span class="lang-flag">🇪🇸</span>
+                            <div>
+                                <h3 class="lang-name">Español</h3>
+
+                        <div id="google_translate_element" aria-hidden="true"></div>
+                                <span class="lang-level-badge">Nativo</span>
+                            </div>
+                        </div>
+                        <p class="lang-desc">Lengua materna, comunicación fluida oral y escrita.</p>
+                    </article>
+
+                    <!-- Inglés -->
+                    <article class="language-card highlight-card">
+                        <div class="language-header">
+                            <span class="lang-flag">EN</span>
+                            <div>
+                                <h3 class="lang-name">Inglés</h3>
+                                <span class="lang-level-badge">Nivel Actual: B1</span>
+                            </div>
+                        </div>
+                        <div class="lang-details-box">
+                            <div class="lang-detail-row">
+                                <span class="detail-label">Cursando:</span>
+                                <span class="detail-val">Nivel Intermedio B1 (Presencial)</span>
+                            </div>
+                            <div class="lang-detail-row">
+                                <span class="detail-label">Centro:</span>
+                                <span class="detail-val">EOI Guadalajara (Escuela Oficial de Idiomas)</span>
+                            </div>
+                            <div class="lang-detail-row">
+                                <span class="detail-label">Fechas:</span>
+                                <span class="detail-val">Sept 2026 - Jun 2027</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Fin de Sección Idiomas -->
+
+        <!-- ======================================================================
+             SECCIÓN "GUSTOS" (INTERESES Y PASIONES)
+             ====================================================================== -->
+        <!-- Inicio de Sección Gustos -->
+        <section class="section interests-section" id="gustos">
+            <div class="container">
+                <!-- Encabezado de Sección -->
+                <div class="section-header">
+                    <span class="section-tag">Pasiones & Aficiones</span>
+                    <h2 class="section-title">Gustos</h2>
+                    <p class="section-subtitle">Los intereses que impulsan mi creatividad, pensamiento analítico y
+                        curiosidad constante.</p>
+                </div>
+
+                <!-- Cuadrícula de Tarjetas de Intereses -->
+                <div class="interests-grid">
+
+                    <!-- Interés 1: Videojuegos -->
+                    <article class="interest-card" data-tilt>
+                        <div class="interest-icon-circle">
+                            <span class="interest-emoji">🎮</span>
+                        </div>
+                        <h3 class="interest-name">Videojuegos</h3>
+                        <p class="interest-desc">
+                            Me apasionan tanto como jugador como desde la óptica técnica: el diseño de mecánicas,
+                            optimización gráfica, lógica de estados de juego y la narrativa inmersiva que conecta
+                            tecnología y arte.
+                        </p>
+                        <div class="interest-badges">
+                            <span>Mecánicas & Lógica</span>
+                            <span>Rendimiento</span>
+                            <span>Inmersión</span>
+                        </div>
+                    </article>
+
+                    <!-- Interés 2: Tecnología -->
+                    <article class="interest-card" data-tilt>
+                        <div class="interest-icon-circle">
+                            <span class="interest-emoji">⚡</span>
+                        </div>
+                        <h3 class="interest-name">Tecnología</h3>
+                        <p class="interest-desc">
+                            Fascinación continua por la evolución del hardware, sistemas operativos, avances en modelos
+                            de Inteligencia Artificial generativa y las arquitecturas de Big Data que mueven el mundo.
+                        </p>
+                        <div class="interest-badges">
+                            <span>Modelos de IA</span>
+                            <span>Windows & Linux</span>
+                            <span>Hardware</span>
+                        </div>
+                    </article>
+
+                    <!-- Interés 3: Música -->
+                    <article class="interest-card" data-tilt>
+                        <div class="interest-icon-circle">
+                            <span class="interest-emoji">🎵</span>
+                        </div>
+                        <h3 class="interest-name">Música</h3>
+                        <p class="interest-desc">
+                            Mi compañera imprescindible para el flujo de trabajo y la concentración máxima al programar.
+                            Disfruto descubriendo géneros variados, ritmos dinámicos y bandas sonoras que inspiran
+                            nuevas ideas de software.
+                        </p>
+                        <div class="interest-badges">
+                            <span>Deep Work & Focus</span>
+                            <span>Soundtracks</span>
+                            <span>Creatividad</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- Fin de Sección Me Gusta -->
+
+        <!-- ======================================================================
+             SECCIÓN CONTACTO
+             ====================================================================== -->
+        <!-- Inicio de Sección Contacto -->
+        <section class="section contact-section" id="contacto">
+            <div class="container">
+                <div class="contact-box">
+                    <div class="contact-header">
+                        <span class="section-tag">Conectemos</span>
+                        <h2 class="section-title">¿Tienes un proyecto o propuesta?</h2>
+                        <p class="section-subtitle">Abierto a oportunidades en desarrollo multiplataforma, proyectos de
+                            IA & Big Data y colaboraciones tecnológicas.</p>
+                    </div>
+
+                    <div class="contact-grid">
+                        <!-- Vías de Contacto Directo -->
+                        <div class="contact-info-list">
+                            <!-- Ubicación -->
+                            <div class="contact-info-item">
+                                <div class="info-icon">📍</div>
+                                <div>
+                                    <h4>Ubicación</h4>
+                                    <p>Marchamalo, Guadalajara (España)</p>
+                                </div>
+                            </div>
+
+                            <!-- Correo Electrónico -->
+                            <div class="contact-info-item">
+                                <div class="info-icon">✉️</div>
+                                <div>
+                                    <h4>Correo Electrónico</h4>
+                                    <a href="mailto:romerotejedorsergio@gmail.com"
+                                        class="contact-link">romerotejedorsergio@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- LinkedIn Oficial -->
+                            <div class="contact-info-item">
+                                <div class="info-icon" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/srt5/" target="_blank"
+                                        rel="noopener noreferrer" class="contact-link">linkedin.com/in/srt5</a>
+                                </div>
+                            </div>
+
+                            <!-- GitHub Oficial -->
+                            <div class="contact-info-item">
+                                <div class="info-icon" aria-hidden="true">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/SergioR29" target="_blank" rel="noopener noreferrer"
+                                        class="contact-link">github.com/SergioR29</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Formulario de Contacto Funcional en Frontend -->
+                        <form class="contact-form" id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="nombre">Tu Nombre</label>
+                                <input type="text" id="nombre" name="nombre" class="form-input"
+                                    placeholder="Ej: María García" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Tu Correo Electrónico</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="Ej: maria@ejemplo.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" class="form-input form-textarea"
+                                    placeholder="Cuéntame sobre tu proyecto o consulta..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span>Enviar mensaje</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <line x1="22" y1="2" x2="11" y2="13" />
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                </svg>
+                            </button>
+                            <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin de Sección Contacto -->
+
+    </main>
+    <!-- Fin de Contenido Principal -->
+
+    <!-- ==========================================================================
+         PIE DE PÁGINA / FOOTER
+         ========================================================================== -->
+    <!-- Inicio de Pie de Página -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <!-- Columna Marca y Resumen -->
+            <div class="footer-brand">
+                <a href="#inicio" class="logo">
+                    <span class="logo-badge">SR</span>
+                    <span class="logo-text">Sergio Romero Tejedor</span>
+                </a>
+                <p class="footer-tagline">
+                    Desarrollador de IA y Big Data y Multiplataforma de escritorio (Windows) y móvil (Android).
+                </p>
+            </div>
+
+            <!-- Enlaces Rápidos del Pie de Página -->
+            <nav class="footer-nav" aria-label="Enlaces rápidos pie de página">
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#educacion">Educación</a></li>
+                    <li><a href="#idiomas">Idiomas</a></li>
+                    <li><a href="#gustos">Gustos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="https://drive.google.com/uc?export=download&id=1PdMtKUExRVXLFFOW_hDAWm7-X5RnNOdt"
+                            target="_blank" rel="noopener noreferrer" download>Descargar CV</a></li>
+                </ul>
+            </nav>
+
+            <!-- Copyright y Año Dinámico -->
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; <span id="currentYear">2026</span> Sergio Romero Tejedor. Todos los derechos reservados.
+                </p>
+                <p class="footer-made-with">
+                    Construido con HTML semántico, CSS moderno y JS puro.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Fin de Pie de Página -->
+
+    <!-- ==========================================================================
+         MODAL LIGHTBOX PARA VISUALIZACIÓN AMPLIADA DE CAPTURAS
+         ========================================================================== -->
+    <div class="image-modal" id="imageModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Cerrar vista previa">✕</button>
+            <img src="" alt="" class="modal-image" id="modalImage">
+            <p class="modal-caption" id="modalCaption"></p>
+        </div>
+    </div>
+
+    <!-- Script de Interactividad -->
+    <script src="script.js"></script>
+</body>
+
+</html>
