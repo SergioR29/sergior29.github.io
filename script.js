@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         languageSelector.value = currentLanguage;
-        languageSelector.dispatchEvent(new Event('change'));
+        languageSelector.dispatchEvent(new Event('change', { bubbles: true }));
         translationAttempts = 0;
     }
 
