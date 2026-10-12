@@ -63,16 +63,16 @@
 
                 <!-- Acciones a la derecha (a partir de contacto) -->
                 <div class="nav-actions">
-                    <button class="nav-translate-btn" id="translateToggle" type="button"
-                        aria-label="Traducir la página del español al inglés" title="Traducir al inglés"
-                        aria-pressed="false">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M3 5h9M7.5 3v2m3.2 0c-.4 3-2.7 5.6-6.7 7"></path>
-                            <path d="M4.5 7c.8 2 2.7 3.8 5.2 4.7"></path>
-                            <path d="m13 20 3.5-9 3.5 9m-6-3h5"></path>
-                        </svg>
-                    </button>
+                    <div class="nav-language-switcher" role="group" aria-label="Idioma de la página">
+                        <button class="nav-language-btn active" id="translateEs" type="button"
+                            aria-label="Ver la página en español" title="Español" aria-pressed="true">
+                            <img src="assets/img/flag-es.svg" alt="">
+                        </button>
+                        <button class="nav-language-btn" id="translateEn" type="button"
+                            aria-label="Ver la página en inglés" title="Inglés" aria-pressed="false">
+                            <img src="assets/img/flag-uk.svg" alt="">
+                        </button>
+                    </div>
                     <a href="#contacto" class="nav-link nav-btn-contact">Contacto</a>
                     <a href="https://drive.google.com/uc?export=download&id=1PdMtKUExRVXLFFOW_hDAWm7-X5RnNOdt"
                         class="nav-link nav-btn-cv" target="_blank" rel="noopener noreferrer" download>
@@ -118,17 +118,17 @@
                     <!-- Frase de Impacto Dinámica con Máquina de Escribir -->
                     <p class="hero-tagline">
                         <span class="typing-prefix">Desarrollador </span>
-                        <span class="typing-text" id="typingText">de IA y Big Data</span>
+                        <span class="typing-text" id="typingText">de Android (Java, MVVM)</span>
                         <span class="cursor">|</span>
                     </p>
 
                     <!-- Resumen rápido / Descripción -->
                     <p class="hero-description">
-                        Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (<strong>CFGS DAM</strong>) por
-                        el <strong>IES Brianda de Mendoza</strong> y especializándome en IA y Big Data en el <strong>IES
-                            Arcipreste de Hita</strong>. Apasionado por la creación de software de escritorio para
-                        Windows, soluciones móviles nativas para Android y el tratamiento avanzado de datos e
-                        inteligencia artificial.
+                        Técnico Superior en DAM por el <strong>IES Brianda de Mendoza</strong> y estudiante de la
+                        especialización en <strong>IA y Big Data</strong> en el IES Arcipreste de Hita. Mi foco
+                        principal es Android con Java y MVVM; como especialidad complementaria, desarrollo aplicaciones
+                        de escritorio para Windows y Linux con Python y PySide6. Busco crear software útil, eficiente y
+                        mantenible.
                     </p>
 
                     <!-- Botones de Acción (Call to Action) -->
@@ -235,17 +235,24 @@
                                 Hita</strong>.
                         </p>
                         <p>
-                            He desarrollado soluciones integrales para entidades públicas reales, así como proyectos
-                            multiplataforma completos abarcando tanto el ecosistema de escritorio bajo Windows como el
-                            desarrollo móvil nativo en Android.
+                            Transformo necesidades reales en soluciones útiles, eficientes y mantenibles. Durante mis
+                            prácticas FCT de tres meses en el Ayuntamiento de Marchamalo, el sistema de RRHH que
+                            desarrollé con el equipo redujo en un 50 % el tiempo de gestión administrativa y continúa
+                            en producción.
+                        </p>
+                        <p>
+                            Uso herramientas de IA para acelerar el desarrollo y aprender nuevas lógicas, revisando sus
+                            resultados y comprendiendo el código. También aprobé el primer examen de la oposición TAI
+                            del Ayuntamiento de Guadalajara y participé en ECOINNTECH Business Awards 2025, donde
+                            conocí proyectos y profesionales del sector.
                         </p>
 
                         <!-- Objetivo / Qué quiero ser -->
                         <div class="goal-box">
                             <h4 class="goal-title">🎯 Qué quiero ser / Me interesa:</h4>
                             <p class="goal-text">
-                                Quiero ser un <strong>desarrollador de IA y Big Data y Multiplataforma de escritorio
-                                    (Windows) y móvil (Android)</strong>.
+                                Seguir especializándome en <strong>IA y Big Data</strong>, con foco principal en Android
+                                (Java/MVVM) y experiencia complementaria en escritorio (Python/PySide6).
                             </p>
                         </div>
                     </article>
@@ -275,7 +282,8 @@
                                 <h4>Especialización en IA & Big Data</h4>
                                 <span class="pillar-institution">IES Arcipreste de Hita</span>
                                 <p>Formación especializada en aprendizaje automático, procesamiento y análisis masivo de
-                                    datos, algoritmos inteligentes y pipelines modernos.</p>
+                                    datos, algoritmos inteligentes y pipelines modernos. La complemento con cursos de
+                                    iniciación al desarrollo con IA del CEEI Guadalajara y BIG School.</p>
                             </div>
                         </article>
 
@@ -384,8 +392,6 @@
                                         añadir hasta 3 emails destinatarios, marcar una casilla para activar un aviso de
                                         cumplimiento de trienio al enviar el correo y pulsar un botón para enviar un
                                         correo de trienios mediante el protocolo SMTP.</li>
-                                    <li>Botón para recargar la información de nuevo en la tabla de empleados de la
-                                        pantalla principal y en la de los empleados dados de baja.</li>
                                 </ul>
                             </div>
 
@@ -649,7 +655,10 @@
                 <div class="education-grid">
                     <!-- Educación 1: Especialización IA & Big Data -->
                     <article class="education-card highlight-card">
-                        <div class="education-dates-badge">Sept 2026 - Jun 2027 · En curso</div>
+                        <div class="education-dates-badge">
+                            <span>Sept 2026 - Jun 2027</span>
+                            <span class="education-status">En curso</span>
+                        </div>
                         <h3 class="education-title">Curso de Especialización en Inteligencia artificial y Big Data</h3>
                         <div class="education-center">IES Arcipreste de Hita</div>
                         <p class="education-desc">
@@ -665,6 +674,9 @@
                             DAM)</h3>
                         <div class="education-center">IES Brianda de Mendoza</div>
                         <p class="education-desc">
+                            Durante el ciclo profundicé en desarrollo de aplicaciones para PC con Python y PySide6, y
+                            para Android con Java y MVVM; bases de datos SQL y NoSQL, interfaces y lenguajes de marcas,
+                            sistemas Windows y Linux, y programación concurrente y comunicaciones.
                             Participé en un hackathon en octubre de 2024, cursé formación en PRL y realicé tres meses
                             de prácticas FCT en el Ayuntamiento de Marchamalo. Mi TFG obtuvo un 10 y consistió en dos
                             versiones de una misma aplicación: escritorio para Windows y móvil para Android.
@@ -701,11 +713,10 @@
                     <!-- Español -->
                     <article class="language-card">
                         <div class="language-header">
-                            <span class="lang-flag">🇪🇸</span>
+                            <span class="lang-flag">ES</span>
                             <div>
                                 <h3 class="lang-name">Español</h3>
 
-                        <div id="google_translate_element" aria-hidden="true"></div>
                                 <span class="lang-level-badge">Nativo</span>
                             </div>
                         </div>
@@ -979,6 +990,8 @@
             <p class="modal-caption" id="modalCaption"></p>
         </div>
     </div>
+
+    <div id="google_translate_element" aria-hidden="true"></div>
 
     <!-- Script de Interactividad -->
     <script src="script.js"></script>

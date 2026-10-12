@@ -295,37 +295,51 @@ img {
     display: none;
 }
 
-.nav-translate-btn {
+.nav-language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.2rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+}
+
+.nav-language-btn {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    flex: 0 0 40px;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
     padding: 0;
     color: var(--text-secondary);
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
     cursor: pointer;
     transition: var(--transition-smooth);
 }
 
-.nav-translate-btn svg {
-    width: 21px;
-    height: 21px;
+.nav-language-btn img {
+    display: block;
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
-.nav-translate-btn:hover,
-.nav-translate-btn[aria-pressed="true"] {
+.nav-language-btn:hover,
+.nav-language-btn.active {
     color: #fff;
     background: var(--accent-blue);
     border-color: var(--accent-blue);
     box-shadow: var(--shadow-glow);
 }
 
-.nav-translate-btn:focus-visible {
+.nav-language-btn:focus-visible {
     outline: 2px solid var(--accent-cyan);
     outline-offset: 3px;
 }
@@ -997,19 +1011,28 @@ body {
    ========================================================================== */
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-    gap: 1.75rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .education-card {
+    display: grid;
+    grid-template-columns: minmax(150px, 0.35fr) minmax(0, 1fr);
+    grid-template-areas:
+        "dates title"
+        "dates center"
+        "dates desc";
+    column-gap: 1.5rem;
+    row-gap: 0.3rem;
+    align-items: start;
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
-    padding: 2rem;
+    padding: 1.5rem;
     backdrop-filter: blur(10px);
     transition: var(--transition-smooth);
-    display: flex;
-    flex-direction: column;
 }
 
 .education-card:hover {
@@ -1024,31 +1047,49 @@ body {
 }
 
 .education-dates-badge {
+    grid-area: dates;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
     font-size: 0.78rem;
     font-family: var(--font-code);
     color: var(--accent-cyan);
-    margin-bottom: 0.75rem;
+    padding: 0.45rem 0.65rem;
+    background: rgba(0, 210, 255, 0.08);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: var(--radius-sm);
+}
+
+.education-status {
+    font-family: var(--font-main);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent-glow);
 }
 
 .education-title {
+    grid-area: title;
     font-size: 1.2rem;
     color: #fff;
-    margin-bottom: 0.35rem;
+    margin: 0;
     line-height: 1.35;
 }
 
 .education-center {
+    grid-area: center;
     font-size: 0.95rem;
     color: var(--accent-glow);
     font-weight: 600;
-    margin-bottom: 0.85rem;
 }
 
 .education-desc {
+    grid-area: desc;
     font-size: 0.88rem;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-top: auto;
+    margin: 0;
 }
 
 /* ==========================================================================
@@ -2001,5 +2042,16 @@ body {
 
     .contact-info-item {
         gap: 0.75rem;
+    }
+
+    .education-card {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "dates"
+            "title"
+            "center"
+            "desc";
+        row-gap: 0.45rem;
+        padding: 1.25rem;
     }
 }

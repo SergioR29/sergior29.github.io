@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const typingElement = document.getElementById('typingText');
     const words = [
-        'de IA y Big Data',
+        'de Android (Java, MVVM)',
         'de PC (Python, PySide6)',
-        'de Android (Java)'
+        'de IA y Big Data'
     ];
     let wordIndex = 0;
     let charIndex = 0;
@@ -78,8 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ==========================================================================
        2.5. TRADUCCIÓN ESPAÑOL / INGLÉS
        ========================================================================== */
-    const translateToggle = document.getElementById('translateToggle');
-    let isTranslatedToEnglish = false;
+    const translateEs = document.getElementById('translateEs');
+    const translateEn = document.getElementById('translateEn');
+    let currentLanguage = 'es';
     let translationScriptRequested = false;
     let translationAttempts = 0;
 
@@ -94,12 +95,19 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        languageSelector.value = isTranslatedToEnglish ? 'en' : 'es';
+        languageSelector.value = currentLanguage;
         languageSelector.dispatchEvent(new Event('change'));
         translationAttempts = 0;
     }
 
-    if (translateToggle) {
+    function updateLanguageButtons() {
+        translateEs.classList.toggle('active', currentLanguage === 'es');
+        translateEs.setAttribute('aria-pressed', String(currentLanguage === 'es'));
+        translateEn.classList.toggle('active', currentLanguage === 'en');
+        translateEn.setAttribute('aria-pressed', String(currentLanguage === 'en'));
+    }
+
+    if (translateEs && translateEn) {
         window.googleTranslateElementInit = () => {
             new window.google.translate.TranslateElement({
                 pageLanguage: 'es',
@@ -107,37 +115,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 autoDisplay: false
             }, 'google_translate_element');
 
-            applyGoogleTranslation();
+            if (currentLanguage !== 'es') applyGoogleTranslation();
         };
 
-        translateToggle.addEventListener('click', () => {
-            isTranslatedToEnglish = !isTranslatedToEnglish;
-            translateToggle.setAttribute('aria-pressed', String(isTranslatedToEnglish));
-            translateToggle.setAttribute(
-                'aria-label',
-                isTranslatedToEnglish ? 'Mostrar la página en español' : 'Traducir la página del español al inglés'
-            );
-            translateToggle.title = isTranslatedToEnglish ? 'Volver al español' : 'Traducir al inglés';
+        function selectLanguage(language) {
+            currentLanguage = language;
+            updateLanguageButtons();
 
             if (window.google?.translate?.TranslateElement) {
                 applyGoogleTranslation();
-                return;
-            }
-
-            if (!translationScriptRequested) {
+            } else if (language === 'en' && !translationScriptRequested) {
                 translationScriptRequested = true;
                 const translationScript = document.createElement('script');
                 translationScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
                 translationScript.onerror = () => {
-                    translateToggle.title = 'No se pudo cargar la traducción';
-                    translateToggle.setAttribute('aria-label', 'No se pudo cargar la traducción');
-                    translateToggle.setAttribute('aria-pressed', 'false');
-                    isTranslatedToEnglish = false;
+                    currentLanguage = 'es';
+                    updateLanguageButtons();
+                    translateEn.title = 'No se pudo cargar la traducción';
+                    translateEn.setAttribute('aria-label', 'No se pudo cargar la traducción');
                     translationScriptRequested = false;
                 };
                 document.head.appendChild(translationScript);
             }
-        });
+
+            if (mainNav?.classList.contains('open')) {
+                mainNav.classList.remove('open');
+                mobileToggle?.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        translateEs.addEventListener('click', () => selectLanguage('es'));
+        translateEn.addEventListener('click', () => selectLanguage('en'));
+        updateLanguageButtons();
     }
 
 
