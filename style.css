@@ -1284,6 +1284,13 @@ body {
     margin-bottom: 0.75rem;
 }
 
+.tfg-project-meta {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.6rem;
+    margin-bottom: 0.55rem;
+}
+
 .badge-type {
     font-size: 0.72rem;
     text-transform: uppercase;
@@ -1295,6 +1302,18 @@ body {
 .badge-scope {
     font-size: 0.72rem;
     color: var(--text-muted);
+}
+
+.project-grade {
+    padding: 0.15rem 0.45rem;
+    border: 1px solid rgba(52, 211, 153, 0.32);
+    border-radius: 999px;
+    background: rgba(52, 211, 153, 0.1);
+    color: #6ee7b7;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
 .project-title {
