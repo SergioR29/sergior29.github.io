@@ -35,6 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const translateEs = document.getElementById('translateEs');
     const translateEn = document.getElementById('translateEn');
     let currentLanguage = 'es';
+    const cvDownloadLinks = document.querySelectorAll('.cv-download-link');
+
+    function updateCvDownloadLinks() {
+        const cvUrl = currentLanguage === 'en'
+            ? 'https://drive.google.com/uc?export=download&id=1PmkGZIrw6VYOUPc_GiBS8S083SsNzN-9'
+            : 'https://drive.google.com/uc?export=download&id=1PdMtKUExRVXLFFOW_hDAWm7-X5RnNOdt';
+
+        cvDownloadLinks.forEach(link => {
+            link.href = cvUrl;
+        });
+    }
 
     function applyGoogleTranslation() {
         const languageSelector = document.querySelector('.goog-te-combo');
@@ -60,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function selectLanguage(language) {
             currentLanguage = language;
             updateLanguageButtons();
+            updateCvDownloadLinks();
             applyGoogleTranslation();
 
             if (mainNav?.classList.contains('open')) {
