@@ -1455,6 +1455,18 @@ body {
     object-fit: contain;
 }
 
+.skills-category-icons .platform-icons {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.skills-category-icons .pattern-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+}
+
 .skills-category-icons .database-skillicon {
     width: 48px;
     height: 48px;
