@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const typingElement = document.getElementById('typingText');
     const words = [
-        'de Android (Java, MVVM)',
-        'de PC (Python, PySide6)',
-        'de IA y Big Data'
+        'IA & Big Data',
+        'PC (Windows, Linux)',
+        'Móvil (Android)'
     ];
     let wordIndex = 0;
     let charIndex = 0;

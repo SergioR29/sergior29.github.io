@@ -522,6 +522,12 @@ body {
     gap: 0.35rem;
 }
 
+.typing-prefix,
+.typing-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
 .typing-text {
     color: var(--accent-cyan);
     border-bottom: 2px solid var(--accent-cyan);
