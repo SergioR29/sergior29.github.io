@@ -1417,7 +1417,7 @@ body {
     border-right: 1px solid var(--border-subtle);
 }
 
-.skills-category:nth-child(-n + 2) {
+.skills-category:nth-child(-n + 4) {
     border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -1458,6 +1458,13 @@ body {
 .skills-category-icons .oracle-icon {
     width: 40px;
     height: 40px;
+}
+
+.skills-category-icons .pandas-icon {
+    padding: 0.2rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
 }
 
 /* ==========================================================================
