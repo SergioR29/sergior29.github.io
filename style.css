@@ -1465,11 +1465,17 @@ body {
     height: 40px;
 }
 
+.skills-category-icons .numpy-icon,
+.skills-category-icons .pandas-icon {
+    width: 48px;
+    height: 48px;
+}
+
 .skills-category-icons .pandas-icon-frame {
     display: inline-flex;
-    width: 40px;
-    height: 40px;
-    flex: 0 0 40px;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
     align-items: center;
     justify-content: center;
     background: #fff;
@@ -1477,10 +1483,13 @@ body {
 }
 
 .skills-category-icons .pandas-icon {
-    width: 44px;
-    height: 44px;
     max-width: none;
     object-fit: contain;
+}
+
+.skills-category-icons .r-icon {
+    width: auto;
+    height: auto;
 }
 
 /* ==========================================================================
