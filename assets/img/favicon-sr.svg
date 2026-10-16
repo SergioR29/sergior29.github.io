@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SR logo">
+  <defs>
+    <linearGradient id="srGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#srGradient)"/>
+  <text x="50%" y="56%" text-anchor="middle" font-family="'Segoe UI', 'Arial', sans-serif" font-size="28" font-weight="800" fill="#ffffff" letter-spacing="-1">SR</text>
+</svg>
