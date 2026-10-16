@@ -1381,6 +1381,85 @@ body {
     font-weight: 700;
 }
 
+.skills-stack-title {
+    margin: 2.5rem 0 0;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.skills-frame {
+    margin: 1.25rem auto 0;
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+}
+
+.skills-categories {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.skills-category {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.skills-category:nth-child(odd) {
+    border-right: 1px solid var(--border-subtle);
+}
+
+.skills-category:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.skills-category h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.skills-category img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.skills-category-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 100%;
+}
+
+.skills-category-icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.skills-category-icons .database-skillicon {
+    width: 48px;
+    height: 48px;
+}
+
+.skills-category-icons .oracle-icon {
+    width: 40px;
+    height: 40px;
+}
+
 /* ==========================================================================
    SECCIÓN "ME GUSTA" (INTERESES)
    ========================================================================== */
@@ -1988,6 +2067,18 @@ body {
     .hero-cta-group {
         flex-wrap: wrap;
         gap: 0.65rem;
+    }
+
+    .skills-categories {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .skills-category:nth-child(odd) {
+        border-right: 0;
+    }
+
+    .skills-category:not(:last-child) {
+        border-bottom: 1px solid var(--border-subtle);
     }
 
     .hero-cta-group .btn {
