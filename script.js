@@ -8,53 +8,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ==========================================================================
-       1. MÁQUINA DE ESCRIBIR DINÁMICA (HERO SECTION)
-       ========================================================================== */
-    const typingElement = document.getElementById('typingText');
-    const words = [
-        'IA & Big Data',
-        'PC (Windows, Linux)',
-        'Móvil (Android)'
-    ];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    const typingSpeed = 90;
-    const deletingSpeed = 45;
-    const pauseTime = 1800;
-
-    function typeEffect() {
-        if (!typingElement) return;
-
-        const currentWord = words[wordIndex];
-
-        if (isDeleting) {
-            typingElement.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typingElement.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-        }
-
-        let speed = isDeleting ? deletingSpeed : typingSpeed;
-
-        if (!isDeleting && charIndex === currentWord.length) {
-            speed = pauseTime;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            speed = 400;
-        }
-
-        setTimeout(typeEffect, speed);
-    }
-
-    typeEffect();
-
-
-    /* ==========================================================================
-       2. MENÚ MÓVIL (HAMBURGUESA ACCESIBLE)
+       1. MENÚ MÓVIL (HAMBURGUESA ACCESIBLE)
        ========================================================================== */
     const mobileToggle = document.getElementById('mobileNavToggle');
     const mainNav = document.getElementById('mainNav');
@@ -81,26 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const translateEs = document.getElementById('translateEs');
     const translateEn = document.getElementById('translateEn');
     let currentLanguage = 'es';
-    let translationScriptRequested = false;
-    let translationAttempts = 0;
 
     function applyGoogleTranslation() {
         const languageSelector = document.querySelector('.goog-te-combo');
 
         if (!languageSelector) {
-            if (translationAttempts < 30) {
-                translationAttempts++;
-                window.setTimeout(applyGoogleTranslation, 100);
-            }
+            window.setTimeout(applyGoogleTranslation, 150);
             return;
         }
 
         languageSelector.value = currentLanguage;
         languageSelector.dispatchEvent(new Event('change', { bubbles: true }));
-        translationAttempts = 0;
     }
 
     function updateLanguageButtons() {
+        if (!translateEs || !translateEn) return;
         translateEs.classList.toggle('active', currentLanguage === 'es');
         translateEs.setAttribute('aria-pressed', String(currentLanguage === 'es'));
         translateEn.classList.toggle('active', currentLanguage === 'en');
@@ -108,35 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (translateEs && translateEn) {
-        window.googleTranslateElementInit = () => {
-            new window.google.translate.TranslateElement({
-                pageLanguage: 'es',
-                includedLanguages: 'en,es',
-                autoDisplay: false
-            }, 'google_translate_element');
-
-            if (currentLanguage !== 'es') applyGoogleTranslation();
-        };
-
         function selectLanguage(language) {
             currentLanguage = language;
             updateLanguageButtons();
-
-            if (window.google?.translate?.TranslateElement) {
-                applyGoogleTranslation();
-            } else if (language === 'en' && !translationScriptRequested) {
-                translationScriptRequested = true;
-                const translationScript = document.createElement('script');
-                translationScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-                translationScript.onerror = () => {
-                    currentLanguage = 'es';
-                    updateLanguageButtons();
-                    translateEn.title = 'No se pudo cargar la traducción';
-                    translateEn.setAttribute('aria-label', 'No se pudo cargar la traducción');
-                    translationScriptRequested = false;
-                };
-                document.head.appendChild(translationScript);
-            }
+            applyGoogleTranslation();
 
             if (mainNav?.classList.contains('open')) {
                 mainNav.classList.remove('open');
