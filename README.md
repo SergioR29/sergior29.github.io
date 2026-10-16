@@ -92,6 +92,7 @@ Septiembre 2021 - junio 2023
 
 - Correo: romerotejedorsergio@gmail.com
 - GitHub: https://github.com/SergioR29
+- LinkedIn: https://www.linkedin.com/in/srt5/
 - Ubicación: Marchamalo, Guadalajara (España)
 
 ## Repositorio
