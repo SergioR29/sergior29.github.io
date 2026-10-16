@@ -1361,6 +1361,26 @@ body {
     border-radius: 4px;
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 1rem;
+}
+
+.skills-card {
+    padding: 1.4rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+}
+
+.skills-card-title {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
 /* ==========================================================================
    SECCIÓN "ME GUSTA" (INTERESES)
    ========================================================================== */
