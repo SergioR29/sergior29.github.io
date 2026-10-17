@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translateEs = document.getElementById('translateEs');
     const translateEn = document.getElementById('translateEn');
     let currentLanguage = 'es';
+    let googleTranslationWasActive = false;
     const cvDownloadLinks = document.querySelectorAll('.cv-download-link');
 
     function updateCvDownloadLinks() {
@@ -66,6 +67,50 @@ document.addEventListener('DOMContentLoaded', () => {
         translateEn.classList.toggle('active', currentLanguage === 'en');
         translateEn.setAttribute('aria-pressed', String(currentLanguage === 'en'));
     }
+
+    function isGoogleTranslationActive() {
+        return document.documentElement.classList.contains('translated-ltr')
+            || document.documentElement.classList.contains('translated-rtl')
+            || document.body?.classList.contains('translated-ltr')
+            || document.body?.classList.contains('translated-rtl');
+    }
+
+    function selectSpanishAfterGoogleReset() {
+        if (currentLanguage !== 'en') return;
+
+        currentLanguage = 'es';
+        updateLanguageButtons();
+        updateCvDownloadLinks();
+        googleTranslationWasActive = false;
+    }
+
+    function syncLanguageAfterGoogleReset() {
+        const translationIsActive = isGoogleTranslationActive();
+
+        if (translationIsActive) {
+            googleTranslationWasActive = true;
+        } else if (googleTranslationWasActive) {
+            selectSpanishAfterGoogleReset();
+        }
+    }
+
+    googleTranslationWasActive = isGoogleTranslationActive();
+    const googleTranslationObserver = new MutationObserver(syncLanguageAfterGoogleReset);
+    [document.documentElement, document.body].forEach(element => {
+        if (!element) return;
+        googleTranslationObserver.observe(element, {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+    });
+
+    document.addEventListener('change', event => {
+        if (event.target instanceof HTMLSelectElement
+            && event.target.matches('.goog-te-combo')
+            && event.target.value !== 'en') {
+            selectSpanishAfterGoogleReset();
+        }
+    });
 
     if (translateEs && translateEn) {
         function selectLanguage(language) {
