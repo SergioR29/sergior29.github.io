@@ -130,6 +130,62 @@ document.addEventListener('DOMContentLoaded', () => {
         updateLanguageButtons();
     }
 
+    const projectsSection = document.getElementById('proyectos');
+    const internshipProjectLink = document.querySelector('.experience-link-card[href="#proyecto-practicas"]');
+    const internshipProjectCard = document.getElementById('proyecto-practicas');
+    const focusableProjectCards = projectsSection?.querySelectorAll('.project-card') || [];
+    focusableProjectCards.forEach(card => card.setAttribute('tabindex', '-1'));
+    let pendingProjectFocus = null;
+
+    function clearProjectFocus() {
+        pendingProjectFocus = null;
+        projectsSection?.querySelector('.project-card:focus')?.blur();
+    }
+
+    function updateProjectFocus() {
+        if (!projectsSection) return;
+
+        const sectionBounds = projectsSection.getBoundingClientRect();
+
+        if (pendingProjectFocus) {
+            const cardBounds = pendingProjectFocus.getBoundingClientRect();
+            if (cardBounds.bottom > 0 && cardBounds.top < window.innerHeight) {
+                const cardToFocus = pendingProjectFocus;
+                pendingProjectFocus = null;
+                cardToFocus.focus({ preventScroll: true });
+            }
+            return;
+        }
+
+        const focusedCard = projectsSection.querySelector('.project-card:focus');
+        if (focusedCard && (sectionBounds.bottom <= 0 || sectionBounds.top >= window.innerHeight)) {
+            focusedCard.blur();
+        }
+    }
+
+    if (projectsSection) {
+        if (internshipProjectLink && internshipProjectCard) {
+            internshipProjectLink.addEventListener('click', event => {
+                if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+                pendingProjectFocus = internshipProjectCard;
+                window.requestAnimationFrame(updateProjectFocus);
+            });
+        }
+
+        projectsSection.addEventListener('click', event => {
+            const clickedCard = event.target instanceof Element
+                ? event.target.closest('.project-card')
+                : null;
+
+            if (!clickedCard) return;
+
+            clearProjectFocus();
+            clickedCard.focus({ preventScroll: true });
+        });
+
+        window.addEventListener('scroll', updateProjectFocus, { passive: true });
+    }
 
     /* ==========================================================================
        3. NAVEGACIÓN ACTIVA EN SCROLL (SCROLLSPY)
