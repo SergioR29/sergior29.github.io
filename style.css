@@ -1530,10 +1530,10 @@ body {
     object-fit: contain;
 }
 
-.skills-category-icons .platform-icons {
-    width: auto;
-    height: auto;
-    max-width: 100%;
+.skills-category-icons .skill-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
 .skills-category-icons .pattern-icon {
@@ -1581,8 +1581,9 @@ body {
 }
 
 .skills-category-icons .r-icon {
-    width: auto;
-    height: auto;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
 /* ==========================================================================
