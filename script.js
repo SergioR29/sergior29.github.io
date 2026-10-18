@@ -35,6 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const translateEs = document.getElementById('translateEs');
     const translateEn = document.getElementById('translateEn');
     let currentLanguage = 'es';
+    const internshipDateBadge = document.querySelector('.date-badge');
+
+    function updateInternshipDateTooltip() {
+        if (!internshipDateBadge) return;
+
+        const isEnglish = currentLanguage === 'en';
+        internshipDateBadge.dataset.tooltip = isEnglish
+            ? 'Exact dates: 24/03/2025 to 13/06/2025'
+            : 'Fechas reales: 24/03/2025 al 13/06/2025';
+        internshipDateBadge.setAttribute('aria-label', isEnglish
+            ? 'Approximate dates: April 2025 to June 2025. Exact dates: 24/03/2025 to 13/06/2025'
+            : 'Fechas aproximadas: abril de 2025 a junio de 2025. Fechas reales: 24/03/2025 al 13/06/2025');
+    }
+
+    updateInternshipDateTooltip();
     let googleTranslationWasActive = false;
     const cvDownloadLinks = document.querySelectorAll('.cv-download-link');
 
@@ -81,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLanguage = 'es';
         updateLanguageButtons();
         updateCvDownloadLinks();
+        updateInternshipDateTooltip();
         googleTranslationWasActive = false;
     }
 
@@ -105,9 +121,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('change', event => {
-        if (event.target instanceof HTMLSelectElement
-            && event.target.matches('.goog-te-combo')
-            && event.target.value !== 'en') {
+        if (!(event.target instanceof HTMLSelectElement)
+            || !event.target.matches('.goog-te-combo')) return;
+
+        if (event.target.value === 'en') {
+            currentLanguage = 'en';
+            updateLanguageButtons();
+            updateCvDownloadLinks();
+            updateInternshipDateTooltip();
+        } else {
             selectSpanishAfterGoogleReset();
         }
     });
@@ -117,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentLanguage = language;
             updateLanguageButtons();
             updateCvDownloadLinks();
+            updateInternshipDateTooltip();
             applyGoogleTranslation();
 
             if (mainNav?.classList.contains('open')) {
