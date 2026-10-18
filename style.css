@@ -1496,7 +1496,7 @@ body {
     border-bottom: 1px solid var(--border-subtle);
 }
 
-.skills-category:last-child {
+.skills-category:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     border-right: 0;
 }
