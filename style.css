@@ -868,15 +868,42 @@ body {
     flex-wrap: wrap;
 }
 
+.experience-role-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+
+.experience-role-details {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.experience-company-logo {
+    display: block;
+    width: 88px;
+    height: 88px;
+    flex: 0 0 88px;
+    background: #fff;
+    border-radius: 0.6rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+
 .experience-title {
     font-size: 1.4rem;
     color: #fff;
-    margin-bottom: 0.25rem;
+    margin: 0 0 0.35rem;
 }
 
 .experience-company {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 0.6rem;
 }
 
