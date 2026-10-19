@@ -625,6 +625,11 @@ body {
     line-height: 1.35;
 }
 
+.highlight-dates {
+    font-size: 0.60rem;
+    color: var(--text-secondary);
+}
+
 .highlight-divider {
     width: 1px;
     height: 32px;
