@@ -532,6 +532,7 @@ body {
     font-size: 1.05rem;
     margin-bottom: 2rem;
     max-width: 580px;
+    text-align: justify;
 }
 
 .hero-cta-group {
