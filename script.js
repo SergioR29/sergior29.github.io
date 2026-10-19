@@ -34,8 +34,22 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const translateEs = document.getElementById('translateEs');
     const translateEn = document.getElementById('translateEn');
+    const profileJsonCode = document.getElementById('profileJsonCode');
+    const profileJsonTokens = profileJsonCode?.querySelectorAll('[data-profile-json-es]') || [];
     let currentLanguage = 'es';
     const internshipDateBadge = document.querySelector('.date-badge');
+
+    function updateProfileJsonLanguage() {
+        if (!profileJsonCode) return;
+
+        profileJsonCode.lang = currentLanguage;
+        profileJsonTokens.forEach(token => {
+            const value = currentLanguage === 'en'
+                ? token.dataset.profileJsonEn
+                : token.dataset.profileJsonEs;
+            token.textContent = JSON.stringify(value);
+        });
+    }
 
     function updateInternshipDateTooltip() {
         if (!internshipDateBadge) return;
@@ -50,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     updateInternshipDateTooltip();
+    updateProfileJsonLanguage();
     let googleTranslationWasActive = false;
     const cvDownloadLinks = document.querySelectorAll('.cv-download-link');
 
@@ -97,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateLanguageButtons();
         updateCvDownloadLinks();
         updateInternshipDateTooltip();
+        updateProfileJsonLanguage();
         googleTranslationWasActive = false;
     }
 
@@ -129,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateLanguageButtons();
             updateCvDownloadLinks();
             updateInternshipDateTooltip();
+            updateProfileJsonLanguage();
         } else {
             selectSpanishAfterGoogleReset();
         }
@@ -140,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateLanguageButtons();
             updateCvDownloadLinks();
             updateInternshipDateTooltip();
+            updateProfileJsonLanguage();
             applyGoogleTranslation();
 
             if (mainNav?.classList.contains('open')) {
