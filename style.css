@@ -1120,9 +1120,9 @@ body {
     display: grid;
     grid-template-columns: minmax(150px, 0.35fr) minmax(0, 1fr);
     grid-template-areas:
-        "dates title"
-        "dates center"
-        "dates desc";
+        "meta title"
+        "meta center"
+        "meta desc";
     column-gap: 1.5rem;
     row-gap: 0.3rem;
     align-items: start;
@@ -1146,7 +1146,6 @@ body {
 }
 
 .education-dates-badge {
-    grid-area: dates;
     align-self: start;
     display: flex;
     flex-direction: column;
@@ -1159,6 +1158,38 @@ body {
     background: rgba(0, 210, 255, 0.08);
     border: 1px solid rgba(0, 210, 255, 0.2);
     border-radius: var(--radius-sm);
+}
+
+.education-meta {
+    grid-area: meta;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.education-location-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.65rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    font-size: 0.76rem;
+    line-height: 1.35;
+}
+
+.education-location-badge svg {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    fill: none;
+    stroke: var(--accent-cyan);
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .education-status {
@@ -2341,7 +2372,7 @@ body {
     .education-card {
         grid-template-columns: minmax(0, 1fr);
         grid-template-areas:
-            "dates"
+            "meta"
             "title"
             "center"
             "desc";
