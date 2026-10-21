@@ -701,6 +701,60 @@ body {
     overflow-x: auto;
 }
 
+.terminal-body pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+#profileJsonCode {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    white-space: normal;
+}
+
+.profile-json-brace {
+    display: block;
+}
+
+.profile-json-field {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding-left: 4ch;
+    text-indent: -2ch;
+    overflow-wrap: anywhere;
+}
+
+.profile-json-field > .token-key {
+    white-space: nowrap;
+}
+
+.profile-json-value {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.profile-json-array-bracket {
+    display: inline;
+}
+
+.profile-json-array-item {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding-left: 6ch;
+    text-indent: -2ch;
+    overflow-wrap: anywhere;
+}
+
+.profile-json-array-close {
+    display: block;
+    padding-left: 2ch;
+}
+
 .token-key {
     color: var(--accent-glow);
 }
@@ -2367,11 +2421,6 @@ body {
         overflow-x: hidden;
         padding: 0.9rem;
         font-size: 0.72rem;
-    }
-
-    .terminal-body pre {
-        white-space: pre-wrap;
-        overflow-wrap: anywhere;
     }
 
     .contact-box {
