@@ -836,6 +836,29 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.pillar-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem 0.65rem;
+    margin-bottom: 0.5rem;
+}
+
+.pillar-meta .pillar-institution {
+    margin-bottom: 0;
+}
+
+.pillar-study-dates {
+    padding: 0.2rem 0.5rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    font-size: 0.7rem;
+    line-height: 1.35;
+    white-space: nowrap;
+}
+
 .pillar-info p {
     font-size: 0.88rem;
     color: var(--text-secondary);
