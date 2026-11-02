@@ -7,6 +7,37 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    /* Mantener la altura de las categorías de habilidades según la primera fila. */
+    const skillsGrid = document.querySelector('.skills-grid');
+    if (skillsGrid) {
+        let skillsResizeFrame = 0;
+
+        const equalizeSkillsCardHeights = () => {
+            const cards = [...skillsGrid.querySelectorAll('.skills-card')];
+            if (!cards.length) return;
+
+            skillsGrid.style.removeProperty('--skills-card-height');
+            const referenceCards = cards.slice(0, Math.min(4, cards.length));
+            const height = Math.ceil(Math.max(...referenceCards.map(card => card.getBoundingClientRect().height)));
+
+            if (height > 0) {
+                skillsGrid.style.setProperty('--skills-card-height', `${height}px`);
+            }
+        };
+
+        const scheduleSkillsCardEqualization = () => {
+            cancelAnimationFrame(skillsResizeFrame);
+            skillsResizeFrame = requestAnimationFrame(equalizeSkillsCardHeights);
+        };
+
+        scheduleSkillsCardEqualization();
+        window.addEventListener('resize', scheduleSkillsCardEqualization, { passive: true });
+        document.fonts?.ready.then(scheduleSkillsCardEqualization);
+
+        const skillsContentObserver = new MutationObserver(scheduleSkillsCardEqualization);
+        skillsContentObserver.observe(skillsGrid, { childList: true, characterData: true, subtree: true });
+    }
+
     /* ==========================================================================
        1. MENÚ MÓVIL (HAMBURGUESA ACCESIBLE)
        ========================================================================== */
