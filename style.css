@@ -472,6 +472,29 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.status-badge-copy {
+    display: grid;
+    min-width: 0;
+    gap: 0.18rem;
+}
+
+.status-badge-line {
+    display: block;
+    line-height: 1.35;
+}
+
+.status-badge-primary {
+    color: var(--accent-glow);
+    font-size: 0.96rem;
+    font-weight: 600;
+}
+
+.status-badge-detail {
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    font-weight: 400;
+}
+
 .status-indicator {
     width: 8px;
     height: 8px;
