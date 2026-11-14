@@ -472,6 +472,46 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.status-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
+}
+
+.status-badges .status-badge {
+    margin-bottom: 0;
+}
+
+.status-badge--unavailable {
+    color: #fca5a5;
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.status-badge-unavailable-copy {
+    color: #fca5a5;
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.status-indicator-unavailable {
+    display: inline-flex;
+    flex: 0 0 16px;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #dc2626;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.65);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
 .status-badge-copy {
     display: grid;
     min-width: 0;
