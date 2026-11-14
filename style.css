@@ -485,13 +485,15 @@ body {
 }
 
 .status-badge--unavailable {
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
     color: #fca5a5;
     border-color: rgba(239, 68, 68, 0.3);
 }
 
 .status-badge-unavailable-copy {
     color: #fca5a5;
-    font-size: 0.84rem;
+    font-size: 0.8rem;
     font-weight: 600;
 }
 
