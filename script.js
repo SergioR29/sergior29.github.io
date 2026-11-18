@@ -63,6 +63,27 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ==========================================================================
        2.5. TRADUCCIÓN ESPAÑOL / INGLÉS
        ========================================================================== */
+    const homeLinks = document.querySelectorAll('a[href="#inicio"]');
+    const heroProfilePhoto = document.querySelector('.hero-profile-photo');
+    const mainHeader = document.querySelector('.main-header');
+    if (homeLinks.length && heroProfilePhoto && mainHeader) {
+        homeLinks.forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+
+                const photoTop = window.scrollY + heroProfilePhoto.getBoundingClientRect().top;
+                const headerBottom = mainHeader.getBoundingClientRect().bottom;
+                const targetScrollTop = Math.max(0, photoTop - headerBottom);
+
+                if (window.location.hash !== '#inicio') {
+                    window.history.pushState(null, '', '#inicio');
+                }
+
+                window.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
+            });
+        });
+    }
+
     const translateEs = document.getElementById('translateEs');
     const translateEn = document.getElementById('translateEn');
     const profileJsonCode = document.getElementById('profileJsonCode');
