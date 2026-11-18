@@ -497,6 +497,25 @@ body {
     font-weight: 600;
 }
 
+.contact-info-list .contact-unavailability {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+    border-radius: var(--radius-md);
+}
+
+.contact-unavailability .status-indicator-unavailable {
+    margin-top: 0.1rem;
+}
+
+.contact-unavailability .status-badge-unavailable-copy {
+    min-width: 0;
+    line-height: 1.45;
+}
+
 .status-indicator-unavailable {
     display: inline-flex;
     flex: 0 0 16px;

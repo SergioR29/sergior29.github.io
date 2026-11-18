@@ -434,7 +434,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const nombre = document.getElementById('nombre').value.trim();
             const emailInput = document.getElementById('email');
             const email = emailInput.value.trim();
-            const mensaje = document.getElementById('mensaje').value;
+            const mensajeInput = document.getElementById('mensaje');
+            const mensaje = mensajeInput.value.trim();
 
             if (!nombre || !email || !emailInput.validity.valid) {
                 formFeedback.className = 'form-feedback error';
@@ -442,11 +443,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            if (!mensaje) {
+                formFeedback.className = 'form-feedback error';
+                formFeedback.textContent = currentLanguage === 'en'
+                    ? 'Write a message before sending.'
+                    : 'Escribe un mensaje antes de enviarlo.';
+                mensajeInput.focus();
+                return;
+            }
+
             const subject = encodeURIComponent(`Mensaje desde la web de ${nombre}`);
-            const textoCorreo = mensaje.trim()
-                ? mensaje
-                : `Hola, soy ${nombre}. Le escribo desde el correo ${email}.`;
-            const body = encodeURIComponent(textoCorreo);
+            const body = encodeURIComponent(mensaje);
             formFeedback.className = 'form-feedback success';
             formFeedback.textContent = 'Se abrirá tu aplicación de correo. Revisa el mensaje y pulsa Enviar.';
             window.location.href = `mailto:romerotejedorsergio@gmail.com?subject=${subject}&body=${body}`;
