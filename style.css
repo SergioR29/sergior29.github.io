@@ -592,15 +592,11 @@ body {
 .contact-info-list .contact-unavailability {
     display: flex;
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     max-width: 100%;
     margin-bottom: 0;
     border-radius: var(--radius-md);
-}
-
-.contact-unavailability .status-indicator-unavailable {
-    margin-top: 0.1rem;
 }
 
 .contact-unavailability .status-badge-unavailable-copy {
