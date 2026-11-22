@@ -491,6 +491,47 @@ body {
     border-color: rgba(239, 68, 68, 0.3);
 }
 
+.availability-toggle {
+    appearance: none;
+    gap: 0.6rem;
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+    transition: var(--transition-smooth);
+}
+
+.availability-toggle:hover,
+.availability-toggle:focus-visible {
+    border-color: rgba(239, 68, 68, 0.65);
+    background: rgba(127, 29, 29, 0.16);
+}
+
+.availability-toggle.is-expanded {
+    border-color: rgba(148, 163, 184, 0.35);
+    background: rgba(71, 85, 105, 0.28);
+    color: #cbd5e1;
+}
+
+.availability-indicator {
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #dc2626;
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.65);
+}
+
+.availability-toggle[data-availability="available"] .availability-indicator {
+    background: #10b981;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.65);
+}
+
+.hero-unavailability-message[hidden] {
+    display: none;
+}
+
 .status-badge-unavailable-copy {
     color: #fca5a5;
     font-size: 0.8rem;

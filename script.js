@@ -84,6 +84,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const availabilityToggle = document.getElementById('availabilityToggle');
+    const heroAvailabilityNotice = document.getElementById('heroAvailabilityNotice');
+    if (availabilityToggle && heroAvailabilityNotice) {
+        availabilityToggle.addEventListener('click', () => {
+            const isExpanded = availabilityToggle.getAttribute('aria-expanded') === 'true';
+            const shouldExpand = !isExpanded;
+
+            availabilityToggle.setAttribute('aria-expanded', String(shouldExpand));
+            availabilityToggle.classList.toggle('is-expanded', shouldExpand);
+            heroAvailabilityNotice.hidden = !shouldExpand;
+        });
+    }
+
     const translateEs = document.getElementById('translateEs');
     const translateEn = document.getElementById('translateEn');
     const profileJsonCode = document.getElementById('profileJsonCode');
