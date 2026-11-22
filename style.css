@@ -529,6 +529,56 @@ body {
     box-shadow: 0 0 8px rgba(16, 185, 129, 0.65);
 }
 
+.availability-control-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.availability-code-hint {
+    appearance: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.45rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #86efac;
+    font-family: var(--font-code);
+    font-size: 0.68rem;
+    line-height: 1.45;
+    text-align: left;
+    cursor: pointer;
+}
+
+.availability-code-hint:hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 3px;
+}
+
+.availability-code-hint:focus-visible {
+    outline: 1px solid var(--accent-cyan);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.availability-code-hint.is-expanded {
+    color: #cbd5e1;
+}
+
+.availability-code-hint.is-expanded .availability-code-arrow {
+    color: #cbd5e1;
+}
+
+.availability-code-arrow {
+    color: var(--accent-cyan);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
 .hero-unavailability-message[hidden] {
     display: none;
 }

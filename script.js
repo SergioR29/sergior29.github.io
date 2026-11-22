@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const availabilityToggle = document.getElementById('availabilityToggle');
+    const availabilityHintToggle = document.getElementById('availabilityHintToggle');
     const heroAvailabilityNotice = document.getElementById('heroAvailabilityNotice');
     if (availabilityToggle && heroAvailabilityNotice) {
         availabilityToggle.addEventListener('click', () => {
@@ -93,8 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             availabilityToggle.setAttribute('aria-expanded', String(shouldExpand));
             availabilityToggle.classList.toggle('is-expanded', shouldExpand);
+            availabilityHintToggle?.setAttribute('aria-expanded', String(shouldExpand));
+            availabilityHintToggle?.classList.toggle('is-expanded', shouldExpand);
             heroAvailabilityNotice.hidden = !shouldExpand;
         });
+
+        availabilityHintToggle?.addEventListener('click', () => availabilityToggle.click());
     }
 
     const translateEs = document.getElementById('translateEs');
