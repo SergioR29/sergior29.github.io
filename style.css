@@ -583,6 +583,10 @@ body {
     display: none;
 }
 
+.hero-unavailability-message {
+    width: calc(100% + 3rem);
+}
+
 .status-badge-unavailable-copy {
     color: #fca5a5;
     font-size: 0.8rem;
@@ -2522,6 +2526,10 @@ body {
     .hero-container {
         grid-template-columns: minmax(0, 1fr);
         gap: 3rem;
+    }
+
+    .hero-unavailability-message {
+        width: 100%;
     }
 
     .hero-container > *,
